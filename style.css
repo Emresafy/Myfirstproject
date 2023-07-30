@@ -664,6 +664,10 @@ margin-top: 2rem;
      color: #fff;
 }
 
+.sec4-text button:hover{
+    background-image: linear-gradient(to left, #ef246d, #a315d6 );
+}
+
 /* *{box-sizing: border-box;} */
 
 .sec4items-container{
@@ -1079,6 +1083,9 @@ margin-top: 2rem;
      color: #fff;
 }
 
+.firstitems button:hover{
+    background-image: linear-gradient(to left, #ef246d, #a315d6 );
+}
 .box content{
     position: relative;
     top: 10px;
