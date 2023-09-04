@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Klee+One&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Poppins&family=Quicksand:wght@300&family=Rajdhani:wght@300&family=Raleway&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -42,6 +42,20 @@ label, .menu_icon{
     /* color: #fff; */
 }
 
+.close:checked {
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      display: none;
+    }
+
+    .items-wrapper span{
+        display: none;
+    }
+    .items-wrapper input{
+        display: none;
+    }
+
 .items-wrapper{
     width: 37%;
 }
@@ -51,7 +65,7 @@ label, .menu_icon{
     display: flex;
     justify-content: space-between;
     margin-top: 1.7em;
-    background-color: #0c1014;
+    /* background-color: #0c1014; */
 }
 
 .nav-items a{
@@ -60,7 +74,7 @@ label, .menu_icon{
     opacity: .9;
     font-weight: 500;
     text-decoration: none;
-    background-color: #0c1014;
+    /* background-color: #0c1014; */
 }
 
 .nav-items :first-child{
@@ -105,32 +119,42 @@ label, .menu_icon{
 
 @media ( max-width: 475px ){
     nav{
-        border: 1px solid red;
+        /* border: 1px solid red; */
         margin: auto;
-        max-width: 475px;
-        height: 20vh;
+        max-width: 412px;
+        height: 12vh;
     }
     #nav-container{
-        width: 350px;
-        display: block;
+        /* width: auto; */
+        height: 100%;
+        display: flex;
     }
 
     .nav-logo{
         width: 250px;
+        height: 75px;
+        /* translate: 10% -10%; */
+        /* margin-left: 2rem;
+        margin-top: ; */
     }
 
+    .nav-logo img{
+        height: 40px;
+        width: 100%;
+    }
     .items-wrapper{
         display: none;
-        padding: 20px;
+        padding: 150px 50px;
         position: absolute;
         top:0;
         right: 0;
-        width: 300px;
-        margin-top: 70px;
-        /* z-index: 1; */
-        background-color: #0c1014;
-        opacity: .8;
-        color: white;
+        width: 325px;
+        height: 390px;
+        margin-top: 30px;
+        z-index: 3;
+        background-color: #000;
+        /* opacity: .8; */
+        /* color: white; */
         /* border-bottom: 4px solid #c0886a; */
 
     }
@@ -142,24 +166,47 @@ label, .menu_icon{
         display: none;
     }
 
+    .items-wrapper span{
+        display: block;
+        font-size: 30px;
+        margin-top: -10rem;
+        margin-left: 8rem;
+    }
+
+
     .nav-items{
         display: flex;
         flex-direction: column;
+        margin-top: 7rem;
+        /* opacity: .8; */
     }
 
     .nav-items a{
-        font-size: 25px;
-        color: #fff;
-        padding-top: 2rem;
+        width: 90%;
+        font-size: 29px;
+        font-weight: 900;
+        font-family: 'Raleway', sans-serif;
+        color: #ffffff;
+        padding: 1.1rem;
         text-align: center;
+        /* text-decoration: none; */
+        /* background-color: #0c1014; */
         /* border-bottom: 3px solid white; */
+    }
+
+    .nav-items :first-child{
+        color: #fff;
     }
 
     .hambuger{
         display: block;
-        font-weight: 900;
-        font-size: 2rem;
+        font-weight: 200;
+        font-size: 45px;
+        translate: 800% 0%;
         color: #fff;
+        font-family: monospace;
+        /* margin-top: -3rem; */
+        transform: rotateY(10deg);
     }
 
     #toggle:checked + .items-wrapper {
@@ -276,10 +323,6 @@ section{
 }
 .octagon:before {
     position: absolute;
-    /* There needs to be a negative value here to cancel
-     * out the width of the border. It's currently -3px,
-     * but if the border were 5px, then it'd be -5px.
-     */
     top: -3px; right: -3px; bottom: -3px; left: -3px;
     transform: rotate(45deg);
     content: '';
@@ -796,52 +839,6 @@ margin-top: 2rem;
     transition: background-color 0.6s ease;
  } 
 
- /* .but-1{
-    border: 5px solid #2dfda6;
- } */
-
-  /* .but-1{
-    left: 20%;
-  }
-
-  .but-2{
-    left: 40%;
-  }
-
-  .but-3{
-    left: 60%;
-  }
-
-  .but-4{
-    left: 80%;
-  }
-
-  .but-5{
-    left: 90%;
-  }
-
-  .button-1:focus.sec4-slidewrapper{
-    animation: none;
-    left: 0%;
-  }
-
-  .button-2:focus.sec4-slidewrapperwrapper{
-    animation: none;
-    left: 50%;
-  }
-
-  .button-3:focus.sec4-slidewrapper{
-    animation: none;
-    left: -100%;
-  }
-
-  .button-4:focus.sec4-slidewrapper{
-    animation: none;
-    left: -200%;
-  } */
-
-
-
   .active, .dot:hover{
     background-color: #131d2c;
     border: 5px solid #2dfda6;
@@ -1131,10 +1128,10 @@ margin-top: 2rem;
 @keyframes slide{
     0%{left: 0;}
     10%{left: 0;}
-    15%{left: -50%;}
+    15%{left: -25%;}
     25%{left: -50%;}
     30%{left: -50%;}
-    /* 40%{left: -150%;} */
+    40%{left: 0%;}
     /* 45%{left: -200%;} */
     /* 55%{left: -200%;} */
     /* 60%{left: -150%;} */
@@ -1274,10 +1271,262 @@ margin-top: 2rem;
 
   /* RESPONSIVENESS FOR MAIN */
 
-  @media ( max-width: 475 ) {
+  @media ( max-width: 475px ) {
+    /* body{
+        border: 2px solid red;
+        width: 350px;
+    } */
     #main{
         border: 2px solid #fff;
-        max-width: 350px;
+        max-width: 420px;
+        position: absolute;
+    }
+
+    #sec1-container{
+        border: 2px solid red;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        /* height:vh; */
+    }
+    .sec1-items1{
+        text-align: center;
+        width: 90%;
+        height: 20%;
+    }
+
+    .sec1-items1 h5{
+
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .sec1-items1 h3{
+        font-size: 45px;
+        font-weight: 600;
+    }
+    
+    
+    .sec1-items1 P{
+        font-size: 17px;
+        font-weight: 300;
+        opacity: .9;
+    }
+    
+    .sec1-items1 button{
+        font-size: 16px;
+        font-weight: 500;
+        padding: 20px 35px;
+    }
+    
+    .icon-terms{
+        margin-left: 2rem;
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .icons{
+        /* border: 2px dotted #fff; */
+        width: 100%;
+    }
+
+    .octagonWrap {
+        
+        width:55px;
+        height:55px;
+        translate: -50%;
+        position: relative;
+       
+    }
+    
+    .icons i{
+        font-size: 30px;
+    }
+
+    .position{
+        width: 95%;
+        margin-left: 1rem;
+        margin-top: -2rem;
+        padding-bottom: 2rem;
+    }
+    .position-items2{
+        /* width: 100%; */
+        width: 310px;
+        height: 220px;
+    }
+    
+    .position-items2:hover{
+        transform: none;
+    }
+    
+    .position-items3{ 
+        width: 300px;
+        height: 200px;
+        translate: 10px 30px;
+    }
+    
+
+    #sec2{
+        border: 2px solid red;
+        width: 90%;
+        /* height: 300vh; */
+        margin: auto;
+        margin-top: 2rem;
+    }
+    #sec2 h3{
+        padding: 2rem 0;
+    }
+
+    .sec2-itemswrapper{
+        display: flex;
+        flex-direction: column;
+        column-gap: 2rem;
+    }
+
+    .sec2-items{
+        width: 90%;
+        margin: auto;
+        height: 600px;
+        margin-top: 2rem;
+    }
+
+    .items-inner1{
+        margin-left: 3rem;
+    }
+
+    .items-inner1 i{
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+    .items-inner2{
+        margin-left: 3rem;
+    }
+
+    .items-inner2 i{
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+    .items-inner3{
+        margin-left: 3rem;
+    }
+
+    .items-inner3 i{
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+    .items-inner4{
+        margin-left: 3rem;
+    }
+
+    .items-inner4 i{
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    #sec3{
+        border: 2px solid red;
+        width: 90%;
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    .sec3-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .itemswrapper{
+        border: 2px solid red;
+        margin: auto;
+        height: 50vh;
+        width: 95%;
+        margin-top: -4rem;
+    }
+
+    .empty{
+        width: 100%;
+        height: 85%;
+        margin-top: 1rem;
+    }
+
+    .pics{
+        width: 85%;
+        height: 400px;
+        margin-left: -.3rem;
+        border-radius: 1.5rem;
+    }
+
+    .pics img{
+        object-fit: fit;
+        width: 100%;
+        height: 100%;
+        border-radius: 1.5rem;
+    }
+
+    .textwrapper{
+        border: solid red;
+        width: 95%;
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .textwrapper h3{
+        line-height: 4rem;
+        font-size: 28px;
+    }
+
+    .textwrapper p{
+        font-size: 16px;
+        line-height: 1.5rem;
+    }
+
+    .text-items{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #sec4{
+        border: 2px solid red;
+        width: 90%;
+        margin: auto;
+    }
+
+    .sec4wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sec4-text{
+        /* border: solid red; */
+        width: 95%;
+        margin: auto;
+        /* font-weight: 500; */
+    }
+
+    .sec4-text h3{
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .sec4-text p{
+        width: 85%;
+        font-size: 17.5px;
+        line-height: 1.3;
+    }
+
+    .sec4items-container{
+        border: 2px solid red;
+        width: 90%;
+    }
+    .sec4-slidewrapper{
+        width: 200%;
+    }
+
+    .images-pos{
+        width: 150%;
+        margin: auto;
     }
   }
 
